@@ -243,7 +243,7 @@ const EditItem = ({ item, onSave, onBackClick }) => {
             <button
               onClick={handleDone}
               type="submit"
-              className="w-full mx-auto flex justify-center items-center rounded-full bg-[#00C1C9] text-white py-2 font-medium border-b-4 border-lime-400"
+              className="w-full mx-auto flex justify-center items-center rounded-full bg-[#DD0F14] text-white py-2 font-medium "
             >
               Done
             </button>

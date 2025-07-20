@@ -362,10 +362,10 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       <button
         key={index}
         onClick={() => typeof number === "number" && paginate(number)}
-        className={`w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium
+        className={`w-8 h-8 flex items-center justify-center rounded text-sm font-medium
           ${
             currentPage === number
-              ? "bg-[#00C1C9] text-white"
+              ? "bg-[#B92921] text-white"
               : "text-gray-600 hover:bg-gray-200"
           }
           ${
@@ -404,7 +404,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
               </div>
               <div className="flex items-center space-x-4">
                 <button
-                  className="flex items-center bg-gray-200 rounded-full px-4 py-2 text-sm font-medium hover:bg-gray-300 text-black"
+                  className="flex items-center bg-[#B92921] rounded-full px-4 py-2 text-sm font-medium hover:bg-gray-300 text-white"
                   onClick={() => setShowAddItem(true)} // Show AddItem on click
                 >
                   <svg
@@ -425,7 +425,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
                 </button>
                 <div className="relative">
                   <select
-                    className="bg-gray-200 rounded-full px-4 py-2 text-sm font-medium appearance-none pr-8 cursor-pointer text-black"
+                    className="bg-[#B92921] rounded-full px-4 py-2 text-sm font-medium appearance-none pr-8 cursor-pointer text-white"
                     value={selectedCategory}
                     onChange={(e) => {
                       setSelectedCategory(e.target.value);
@@ -437,7 +437,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
                     <option>Main Course</option>
                     <option>Dessert</option>
                   </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-black">
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
                     <svg
                       className="fill-current h-4 w-4"
                       xmlns="http://www.w3.org/2000/svg"
@@ -464,7 +464,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
                     />
                   </div>
 
-                  <button className="hover:bg-gray-300 transition-colors bg-gray-200 p-[5px] rounded-tr-[7.04px] rounded-br-[7.04px]">
+                  <button className="hover:bg-gray-300 transition-colors bg-[#B92921] p-[5px] rounded-tr-[7.04px] rounded-br-[7.04px]">
                     {" "}
                     {/* Added rounded corners */}
                     <svg
@@ -476,13 +476,13 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
                     >
                       <path
                         d="M11 8.5L20 8.5"
-                        stroke="black"
+                        stroke="white"
                         strokeWidth="1.5"
                         strokeLinecap="round"
                       />
                       <path
                         d="M4 16.5L14 16.5"
-                        stroke="black"
+                        stroke="white"
                         strokeWidth="1.5"
                         strokeLinecap="round"
                       />
@@ -572,9 +572,9 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
             <button
               onClick={() => paginate(currentPage - 1)}
               disabled={currentPage === 1}
-              className={`w-8 h-8 flex items-center justify-center rounded border ${
+              className={`w-8 h-8 flex items-center justify-center rounded-full border ${
                 currentPage === 1
-                  ? "cursor-not-allowed border-gray-300 text-gray-400"
+                  ? "cursor-not-allowed border-[#B92921] text-gray-400"
                   : "hover:bg-gray-200 text-gray-600"
               }`}
             >
@@ -587,7 +587,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
               >
                 <path
                   d="M6.99995 13.4502C6.99995 13.4502 1.00001 9.03126 0.999999 7.45015C0.999986 5.86903 7 1.4502 7 1.4502"
-                  stroke="black"
+                  stroke="#B92921"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -600,9 +600,9 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
             <button
               onClick={() => paginate(currentPage + 1)}
               disabled={currentPage === totalPages || totalPages === 0}
-              className={`w-8 h-8 flex items-center rounded border justify-center ${
+              className={`w-8 h-8 flex items-center rounded-full border border-[#B92921] justify-center ${
                 currentPage === totalPages || totalPages === 0
-                  ? "cursor-not-allowed border-gray-300 text-gray-400"
+                  ? "cursor-not-allowed border-[#B92921] text-[#B92921]"
                   : "hover:bg-gray-200 text-gray-600"
               }`}
             >
@@ -615,7 +615,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
               >
                 <path
                   d="M1.00005 1.4502C1.00005 1.4502 6.99999 5.86913 7 7.45024C7.00001 9.03136 1 13.4502 1 13.4502"
-                  stroke="black"
+                  stroke="#B92921"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"

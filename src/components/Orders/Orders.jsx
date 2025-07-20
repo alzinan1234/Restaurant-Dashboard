@@ -102,7 +102,7 @@ const Orders = () => {
                     onChange={(e) => setSearchTerm(e.target.value)}
                   />
                 </div>
-                <button className="hover:bg-gray-200 transition-colors bg-gray-100 p-[5px] rounded-tr-[7.04px] rounded-br-[7.04px] border-[1px] border-gray-300">
+                <button className="hover:bg-gray-200 transition-colors bg-[#B92921] p-[5px] rounded-tr-[7.04px] rounded-br-[7.04px] border-[1px] border-gray-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -112,13 +112,13 @@ const Orders = () => {
                   >
                     <path
                       d="M11 8.5L20 8.5"
-                      stroke="black"
+                      stroke="white"
                       strokeWidth="1.5"
                       strokeLinecap="round"
                     />
                     <path
                       d="M4 16.5L14 16.5"
-                      stroke="black"
+                      stroke="white"
                       strokeWidth="1.5"
                       strokeLinecap="round"
                     />
@@ -128,7 +128,7 @@ const Orders = () => {
                       rx="3"
                       ry="3"
                       transform="rotate(90 7 8.5)"
-                      stroke="black"
+                      stroke="white"
                       strokeWidth="1.5"
                       strokeLinecap="round"
                     />
@@ -138,7 +138,7 @@ const Orders = () => {
                       rx="3"
                       ry="3"
                       transform="rotate(90 17 16.5)"
-                      stroke="black"
+                      stroke="white"
                       strokeWidth="1.5"
                       strokeLinecap="round"
                     />
@@ -216,22 +216,7 @@ const Orders = () => {
                       {order.amount}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium flex space-x-2 justify-center">
-                      <button className="bg-[#4BB54B1A] border border-[#4BB54B] rounded-[51px] p-[5px] flex justify-center items-center shrink-0 hover:text-green-600">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 12 9"
-                          fill="none"
-                        >
-                          <path
-                            d="M1.3335 6.01782C1.3335 6.01782 2.3335 6.01782 3.66683 8.35116C3.66683 8.35116 7.37271 2.24004 10.6668 1.01782"
-                            stroke="#4BB54B"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </button>
+                    
                       <button
                         onClick={() => handleViewDetails(order.orderId)}
                         className="text-purple-700 border border-[#C267FF] hover:text-purple-900 rounded-[51px] p-[5px]"
@@ -282,7 +267,7 @@ const Orders = () => {
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="w-8 h-8 flex items-center border border-gray-300 rounded-full justify-center p-[10px] hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-8 h-8 flex items-center border border-[#B92921] rounded-full justify-center p-[10px] hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -293,7 +278,7 @@ const Orders = () => {
           >
             <path
               d="M6.99995 13C6.99995 13 1.00001 8.58107 0.999999 6.99995C0.999986 5.41884 7 1 7 1"
-              stroke="#555555"
+              stroke="#B92921"
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -314,7 +299,7 @@ const Orders = () => {
               onClick={() => handlePageChange(pageNumber)}
               className={`w-8 h-8 flex items-center justify-center rounded ${
                 currentPage === pageNumber
-                  ? "bg-[#21F6FF] text-black"
+                  ? "bg-[#B92921] text-white"
                   : "hover:bg-gray-100"
               }`}
             >
@@ -325,7 +310,7 @@ const Orders = () => {
         <button
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="w-8 h-8 flex items-center border border-gray-300 rounded-full justify-center hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-8 h-8 flex items-center border border-[#B92921] rounded-full justify-center hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -336,7 +321,7 @@ const Orders = () => {
           >
             <path
               d="M1.00005 1C1.00005 1 6.99999 5.41893 7 7.00005C7.00001 8.58116 1 13 1 13"
-              stroke="#555555"
+              stroke="#B92921"
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
