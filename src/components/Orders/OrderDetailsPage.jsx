@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-// import { useRouter } from 'next/router'; // Removed to resolve compilation error
 import { X } from 'lucide-react'; // For the close button icon
 
 // Mock data for a single order, used for standalone testing/display if no 'order' prop is passed.
@@ -36,7 +35,7 @@ const OrderDetailsPage = ({ order, onClose }) => { // Accept order and onClose a
 
   if (!currentOrder) { // Handles case where no order prop is passed and no default mock
     return (
-      <div className="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center">
+      <div className="min-h-screen bg-white text-black flex items-center justify-center">
         Order data not available.
         {/* If this were part of a modal, onClose would be used here */}
         <button
@@ -50,25 +49,25 @@ const OrderDetailsPage = ({ order, onClose }) => { // Accept order and onClose a
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center p-4 font-inter">
+    <div className="min-h-screen bg-white text-black flex items-center justify-center p-4 font-inter">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body {
           font-family: 'Inter', sans-serif;
         }
       `}</style>
-      <div className="relative bg-[#343434] rounded-lg shadow-xl p-8 max-w-lg w-full border border-gray-700">
+      <div className="relative bg-white rounded-lg shadow-xl p-8 max-w-lg w-full border border-gray-300">
         {/* Close button */}
         <button
           onClick={onClose} // Use onClose prop for closing
-          className="absolute top-4 right-4 p-2 rounded-full bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-200"
+          className="absolute top-4 right-4 p-2 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 transition duration-200"
         >
-          <X className="text-gray-300" size={20} />
+          <X className="text-gray-600" size={20} />
         </button>
 
         {/* Status Tag */}
         <div className="flex justify-center mb-6">
-          <span className="inline-flex px-4 py-2 text-sm font-semibold rounded-full text-orange-400 bg-orange-900 bg-opacity-30">
+          <span className="inline-flex px-4 py-2 text-sm font-semibold rounded-full text-orange-700 bg-orange-100">
             {currentOrder.status}
           </span>
         </div>
@@ -79,20 +78,20 @@ const OrderDetailsPage = ({ order, onClose }) => { // Accept order and onClose a
             <img
               src={currentOrder.imageUrl}
               alt="Customer"
-              className="rounded-lg w-36 h-36 object-cover border border-gray-700"
+              className="rounded-lg w-36 h-36 object-cover border border-gray-300"
               onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/150x150/6c757d/ffffff?text=No+Image"; }} // Fallback image
             />
           </div>
 
           {/* Order Details Section */}
           <div className="text-center sm:text-left">
-            <p className="text-lg font-medium text-white mb-2">Order ID: {currentOrder.orderId}</p>
-            <p className="text-md text-gray-300 mb-1">Customer name: {currentOrder.customerName}</p>
-            <p className="text-md text-gray-300 mb-1">QR Order: {currentOrder.qrOrder}</p>
-            <p className="text-md text-gray-300 mb-1">Table: {currentOrder.table}</p>
-            <p className="text-md text-gray-300 mb-1">Quantity: {currentOrder.quantity}</p>
-            <p className="text-md text-gray-300 mb-1">Date: {currentOrder.date}</p>
-            <p className="text-md text-gray-300 mb-1">Time: {currentOrder.time}</p>
+            <p className="text-lg font-medium text-gray-900 mb-2">Order ID: {currentOrder.orderId}</p>
+            <p className="text-md text-gray-700 mb-1">Customer name: {currentOrder.customerName}</p>
+            <p className="text-md text-gray-700 mb-1">QR Order: {currentOrder.qrOrder}</p>
+            <p className="text-md text-gray-700 mb-1">Table: {currentOrder.table}</p>
+            <p className="text-md text-gray-700 mb-1">Quantity: {currentOrder.quantity}</p>
+            <p className="text-md text-gray-700 mb-1">Date: {currentOrder.date}</p>
+            <p className="text-md text-gray-700 mb-1">Time: {currentOrder.time}</p>
           </div>
         </div>
       </div>
