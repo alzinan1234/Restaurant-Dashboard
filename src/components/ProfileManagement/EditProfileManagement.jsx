@@ -112,7 +112,7 @@ const EditProfileManagement = ({ onBackClick }) => {
               htmlFor="restaurantName"
               className="block text-gray-700 text-sm font-medium mb-2"
             >
-              Restaurant/Bar Name
+              Restaurant Name
             </label>
             <input
               type="text"
