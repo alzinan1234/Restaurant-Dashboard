@@ -36,18 +36,18 @@ export default function MetricCard({
           {/* Changed text to black */}
           {title}
         </h3>
-        <div className="relative bg-gray-100 rounded-full">
+        <div className="relative bg-[#B92921] text-white rounded-full">
           {" "}
           {/* Changed bg to gray-100 */}
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="flex items-center space-x-1 px-2 py-1 bg-opacity-10 rounded-full text-black text-sm font-semibold font-['DM Sans']" // Changed text to black
+            className="flex items-center space-x-1 px-2 py-1 bg-opacity-10 rounded-full text-white text-sm font-semibold font-['DM Sans']" // Changed text to black
           >
             <span>{selectedPeriod}</span>
             {isDropdownOpen ? (
-              <ChevronUpIcon className="w-4 h-4 bg-gray-200 rounded-full text-black" /> // Changed bg to gray-200, icon color to black
+              <ChevronUpIcon className="w-4 h-4 bg-gray-200 rounded-full text-[#B92921]" /> // Changed bg to gray-200, icon color to black
             ) : (
-              <ChevronDownIcon className="w-4 h-4 bg-gray-200 rounded-full text-black" /> // Changed bg to gray-200, icon color to black
+              <ChevronDownIcon className="w-4 h-4 bg-gray-200 rounded-full text-[#B92921]" /> // Changed bg to gray-200, icon color to black
             )}
           </button>
           {isDropdownOpen && (

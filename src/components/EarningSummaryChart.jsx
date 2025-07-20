@@ -80,18 +80,18 @@ export default function EarningSummaryChart() {
 
         {/* Year Dropdown */}
         {/* Changed background to be lighter */}
-        <div className="relative ml-4 bg-gray-100 rounded-full">
+        <div className="relative ml-4 bg-[#B92921] rounded-full">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             // Ensured text is black
-            className="flex items-center space-x-2 px-3 py-1 rounded-full text-black text-sm font-semibold font-['DM Sans']"
+            className="flex items-center space-x-2 px-3 py-1 rounded-full text-white text-sm font-semibold font-['DM Sans']"
           >
             <span>{selectedYear}</span>
             {/* Removed background from icons, they will inherit black text color */}
             {isDropdownOpen ? (
-              <ChevronUpIcon className="w-4 h-4" />
+              <ChevronUpIcon className="w-4 h-4 bg-gray-200 text-[#B92921] rounded-full" />
             ) : (
-              <ChevronDownIcon className="w-4 h-4" />
+              <ChevronDownIcon className="w-4 h-4 bg-gray-200 text-[#B92921] rounded-full" />
             )}
           </button>
           {isDropdownOpen && (

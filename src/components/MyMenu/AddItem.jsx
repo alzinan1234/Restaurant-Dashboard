@@ -101,7 +101,7 @@ const AddItem = ({ onBackClick, onAddItem }) => {
           <h1 className="text-2xl font-semibold">Add Item</h1>
           <button
             onClick={handleAddCategoryClick}
-            className="ml-auto flex items-center bg-gray-200 rounded-full px-4 py-2 text-sm font-medium hover:bg-gray-300 text-black"
+            className="ml-auto flex items-center bg-[#B92921] rounded-full px-4 py-2 text-sm font-medium hover:bg-gray-300 text-white"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
