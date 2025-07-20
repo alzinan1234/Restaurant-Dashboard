@@ -42,9 +42,9 @@ export default function LoginPage() {
       let token = ""; // To store the token for setting in cookie
 
       // --- Simulated Admin Login ---
-      if (email === "admin@example.com" && password === "admin123") {
-        console.log("Admin Login successful!");
-        toast.success("Admin Login Successful! (Simulated)");
+      if (email === "vendor@example.com" && password === "vendor123") {
+        console.log("Vendor Login successful!");
+        toast.success("Vendor Login Successful! (Simulated)");
         token = "ADMIN_TOKEN_SECRET"; // Set admin token
         redirectPath = "/vendor"; // Redirect admin to /admin
         success = true;
