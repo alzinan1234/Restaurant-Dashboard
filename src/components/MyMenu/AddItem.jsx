@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import AddCategory from "./AddCategory";
-import toast, { Toaster } from 'react-hot-toast'; // Import toast and Toaster
+import toast, { Toaster } from "react-hot-toast"; // Import toast and Toaster
 
 const AddItem = ({ onBackClick, onAddItem }) => {
   const [formData, setFormData] = useState({
@@ -76,16 +76,16 @@ const AddItem = ({ onBackClick, onAddItem }) => {
   };
 
   return (
-    <div className="min-h-screen bg-[#343434] text-white p-8 font-sans rounded-lg flex flex-col items-center relative">
-      <div className="w-full max-w-2xl bg-[#343434] rounded-lg">
+    <div className="min-h-screen bg-white text-black p-8 font-sans rounded-lg flex flex-col items-center relative">
+      <div className="w-full max-w-2xl bg-white rounded-lg">
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={onBackClick}
-            className="mr-4 p-2 rounded-full hover:bg-gray-700"
+            className="mr-4 p-2 rounded-full hover:bg-gray-200"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-white"
+              className="h-6 w-6 text-black"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -101,7 +101,7 @@ const AddItem = ({ onBackClick, onAddItem }) => {
           <h1 className="text-2xl font-semibold">Add Item</h1>
           <button
             onClick={handleAddCategoryClick}
-            className="ml-auto flex items-center bg-[#4A4A4A] rounded-full px-4 py-2 text-sm font-medium hover:bg-[#5A5A5A]"
+            className="ml-auto flex items-center bg-gray-200 rounded-full px-4 py-2 text-sm font-medium hover:bg-gray-300 text-black"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -123,11 +123,11 @@ const AddItem = ({ onBackClick, onAddItem }) => {
 
         <div className="space-y-6">
           <div>
-            <label className="block text-gray-300 text-sm font-medium mb-2">
+            <label className="block text-gray-700 text-sm font-medium mb-2">
               Upload Image
             </label>
             <div
-              className="rounded-lg h-32 cursor-pointer relative overflow-hidden flex items-center justify-center border border-dashed border-[#CACACA]"
+              className="rounded-lg h-32 cursor-pointer relative overflow-hidden flex items-center justify-center border border-dashed border-gray-400"
               onClick={handleImageUploadClick}
             >
               {formData.image ? (
@@ -140,7 +140,7 @@ const AddItem = ({ onBackClick, onAddItem }) => {
                 <div className="flex flex-col items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-8 text-gray-400 mb-2"
+                    className="h-8 w-8 text-gray-500 mb-2"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -152,7 +152,7 @@ const AddItem = ({ onBackClick, onAddItem }) => {
                       d="M12 4v16m8-8H4"
                     />
                   </svg>
-                  <span className="text-gray-400 text-sm">Upload</span>
+                  <span className="text-gray-500 text-sm">Upload</span>
                 </div>
               )}
               <input
@@ -168,7 +168,7 @@ const AddItem = ({ onBackClick, onAddItem }) => {
           <div>
             <label
               htmlFor="name"
-              className="block text-gray-300 text-sm font-medium mb-2"
+              className="block text-gray-700 text-sm font-medium mb-2"
             >
               Item Name
             </label>
@@ -178,14 +178,14 @@ const AddItem = ({ onBackClick, onAddItem }) => {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className="w-full p-3 rounded-lg bg-[#2a2a2a] border border-[#CACACA] focus:outline-none focus:border-blue-500 text-white"
+              className="w-full p-3 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:border-blue-500 text-black"
             />
           </div>
 
           <div>
             <label
               htmlFor="description"
-              className="block text-gray-300 text-sm font-medium mb-2"
+              className="block text-gray-700 text-sm font-medium mb-2"
             >
               Item Details
             </label>
@@ -195,14 +195,14 @@ const AddItem = ({ onBackClick, onAddItem }) => {
               value={formData.description}
               onChange={handleInputChange}
               rows="4"
-              className="w-full p-3 rounded-lg bg-[#2a2a2a] border border-[#CACACA] focus:outline-none focus:border-blue-500 text-white"
+              className="w-full p-3 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:border-blue-500 text-black"
             ></textarea>
           </div>
 
           <div>
             <label
               htmlFor="category"
-              className="block text-gray-300 text-sm font-medium mb-2"
+              className="block text-gray-700 text-sm font-medium mb-2"
             >
               Category
             </label>
@@ -212,13 +212,13 @@ const AddItem = ({ onBackClick, onAddItem }) => {
                 name="category"
                 value={formData.category}
                 onChange={handleInputChange}
-                className="w-full p-3 rounded-lg bg-[#2a2a2a] border border-[#CACACA] focus:outline-none focus:border-blue-500 text-white appearance-none pr-8"
+                className="w-full p-3 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:border-blue-500 text-black appearance-none pr-8"
               >
                 <option>Starter</option>
                 <option>Main Course</option>
                 <option>Dessert</option>
               </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-black">
                 <svg
                   className="fill-current h-4 w-4"
                   xmlns="http://www.w3.org/2000/svg"
@@ -233,7 +233,7 @@ const AddItem = ({ onBackClick, onAddItem }) => {
           <div>
             <label
               htmlFor="price"
-              className="block text-gray-300 text-sm font-medium mb-2"
+              className="block text-gray-700 text-sm font-medium mb-2"
             >
               Item Price
             </label>
@@ -243,14 +243,14 @@ const AddItem = ({ onBackClick, onAddItem }) => {
               name="price"
               value={formData.price}
               onChange={handleInputChange}
-              className="w-full p-3 rounded-lg bg-[#2a2a2a] border border-[#CACACA] focus:outline-none focus:border-blue-500 text-white"
+              className="w-full p-3 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:border-blue-500 text-black"
             />
           </div>
 
           <div>
             <label
               htmlFor="discountPercentage"
-              className="block text-gray-300 text-sm font-medium mb-2"
+              className="block text-gray-700 text-sm font-medium mb-2"
             >
               Discount Percentage
             </label>
@@ -260,7 +260,7 @@ const AddItem = ({ onBackClick, onAddItem }) => {
               name="discountPercentage"
               value={formData.discountPercentage}
               onChange={handleInputChange}
-              className="w-full p-3 rounded-lg bg-[#2a2a2a] border border-[#CACACA] focus:outline-none focus:border-blue-500 text-white"
+              className="w-full p-3 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:border-blue-500 text-black"
             />
           </div>
 
@@ -275,7 +275,6 @@ const AddItem = ({ onBackClick, onAddItem }) => {
           </div>
         </div>
       </div>
-
       {isAddCategoryOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <AddCategory

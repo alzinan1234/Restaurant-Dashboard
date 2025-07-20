@@ -45,16 +45,16 @@ const AddCategory = ({ onBackClick, onAddCategory }) => {
   };
 
   return (
-    <div className=" bg-[#343434] text-white p-8 font-sans rounded-lg flex flex-col items-center">
-      <div className=" w-6xl bg-[#343434] rounded-lg">
+    <div className="bg-white text-black p-8 font-sans rounded-lg flex flex-col items-center">
+      <div className="w-6xl bg-white rounded-lg">
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={onBackClick}
-            className="mr-4 p-2 rounded-full hover:bg-gray-700"
+            className="mr-4 p-2 rounded-full hover:bg-gray-200"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-white"
+              className="h-6 w-6 text-black"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -73,7 +73,7 @@ const AddCategory = ({ onBackClick, onAddCategory }) => {
 
         <div className="space-y-6">
           <div>
-            <label className="block text-gray-300 text-sm font-medium mb-2">
+            <label className="block text-gray-700 text-sm font-medium mb-2">
               Category Name
             </label>
             <input
@@ -81,16 +81,16 @@ const AddCategory = ({ onBackClick, onAddCategory }) => {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className="w-full p-3 rounded-lg bg-[#2a2a2a] border border-[#CACACA] focus:outline-none focus:border-blue-500 text-white"
+              className="w-full p-3 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:border-blue-500 text-black"
             />
           </div>
 
           <div>
-            <label className="block text-gray-300 text-sm font-medium mb-2">
+            <label className="block text-gray-700 text-sm font-medium mb-2">
               Item Category Icon
             </label>
             <div
-              className="rounded-lg h-32 cursor-pointer relative overflow-hidden flex items-center justify-center border border-dashed border-[#CACACA]"
+              className="rounded-lg h-32 cursor-pointer relative overflow-hidden flex items-center justify-center border border-dashed border-gray-400"
               onClick={handleImageUploadClick}
             >
               {formData.image ? (
@@ -103,7 +103,7 @@ const AddCategory = ({ onBackClick, onAddCategory }) => {
                 <div className="flex flex-col items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-8 text-gray-400 mb-2"
+                    className="h-8 w-8 text-gray-500 mb-2"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -115,7 +115,7 @@ const AddCategory = ({ onBackClick, onAddCategory }) => {
                       d="M12 4v16m8-8H4"
                     />
                   </svg>
-                  <span className="text-gray-400 text-sm">Upload</span>
+                  <span className="text-gray-500 text-sm">Upload</span>
                 </div>
               )}
               <input

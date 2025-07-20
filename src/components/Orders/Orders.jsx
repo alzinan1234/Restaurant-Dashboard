@@ -151,44 +151,44 @@ const Orders = () => {
           {/* Orders Table */}
           <div className="overflow-x-auto rounded-lg">
             <table className="min-w-full divide-y divide-gray-300">
-              <thead className="bg-[#00C1C933]">
+              <thead className="bg-[#DD0F14] text-white">
                 {" "}
                 {/* Adjusted opacity for lighter background */}
                 <tr>
                   <th
                     scope="col"
-                    className="px-6 py-3 text-center text-xs font-medium text-gray-700 uppercase tracking-wider rounded-tl-lg"
+                    className="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider rounded-tl-lg"
                   >
                     Order ID
                   </th>
                   <th
                     scope="col"
-                    className="px-6 py-3 text-center text-xs font-medium text-gray-700 uppercase tracking-wider"
+                    className="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider"
                   >
                     Customer Name
                   </th>
                   {/* Removed QR Order and Table headers */}
                   <th
                     scope="col"
-                    className="px-6 py-3 text-center text-xs font-medium text-gray-700 uppercase tracking-wider"
+                    className="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider"
                   >
                     Quantity
                   </th>
                   <th
                     scope="col"
-                    className="px-6 py-3 text-center text-xs font-medium text-gray-700 uppercase tracking-wider"
+                    className="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider"
                   >
                     Status
                   </th>
                   <th
                     scope="col"
-                    className="px-6 py-3 text-center text-xs font-medium text-gray-700 uppercase tracking-wider"
+                    className="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider"
                   >
                     Amount
                   </th>
                   <th
                     scope="col"
-                    className="px-6 py-3 text-center text-xs font-medium text-gray-700 uppercase tracking-wider rounded-tr-lg"
+                    className="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider rounded-tr-lg"
                   >
                     Action
                   </th>

@@ -366,7 +366,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
           ${
             currentPage === number
               ? "bg-[#00C1C9] text-white"
-              : "text-gray-400 hover:bg-[#2d2d2d]"
+              : "text-gray-600 hover:bg-gray-200"
           }
           ${
             number === "..."
@@ -395,17 +395,16 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
           onBackClick={handleBackFromEditItem}
         />
       ) : (
-        <div className="min-h-screen bg-[#343434] text-white p-8 font-sans rounded-lg">
+        <div className="min-h-screen bg-white text-black p-8 font-sans rounded-lg">
           <div className="p-6">
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center">
-           
                 <h1 className="text-2xl font-semibold">My Menu</h1>
               </div>
               <div className="flex items-center space-x-4">
                 <button
-                  className="flex items-center bg-[#4A4A4A] rounded-full px-4 py-2 text-sm font-medium hover:bg-[#5A5A5A]"
+                  className="flex items-center bg-gray-200 rounded-full px-4 py-2 text-sm font-medium hover:bg-gray-300 text-black"
                   onClick={() => setShowAddItem(true)} // Show AddItem on click
                 >
                   <svg
@@ -426,7 +425,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
                 </button>
                 <div className="relative">
                   <select
-                    className="bg-[#4A4A4A] rounded-full px-4 py-2 text-sm font-medium appearance-none pr-8 cursor-pointer"
+                    className="bg-gray-200 rounded-full px-4 py-2 text-sm font-medium appearance-none pr-8 cursor-pointer text-black"
                     value={selectedCategory}
                     onChange={(e) => {
                       setSelectedCategory(e.target.value);
@@ -438,7 +437,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
                     <option>Main Course</option>
                     <option>Dessert</option>
                   </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-black">
                     <svg
                       className="fill-current h-4 w-4"
                       xmlns="http://www.w3.org/2000/svg"
@@ -452,11 +451,11 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
                 {/* Search Input and Button Group */}
                 <div className="flex items-center">
                   <div className="relative">
-                    <MagnifyingGlassIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+                    <MagnifyingGlassIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
                     <input
                       type="text"
                       placeholder="Search"
-                      className="pl-10 pr-4 py-2 bg-[#F3FAFA1A] rounded-tl-[7.04px] rounded-bl-[7.04px] border-[1px] border-[#0000001A] text-white text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      className="pl-10 pr-4 py-2 bg-gray-100 rounded-tl-[7.04px] rounded-bl-[7.04px] border-[1px] border-gray-300 text-black text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
                       value={searchTerm}
                       onChange={(e) => {
                         setSearchTerm(e.target.value);
@@ -465,7 +464,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
                     />
                   </div>
 
-                  <button className="hover:bg-gray-700 transition-colors bg-[#2A2A2A] p-[5px] rounded-tr-[7.04px] rounded-br-[7.04px]">
+                  <button className="hover:bg-gray-300 transition-colors bg-gray-200 p-[5px] rounded-tr-[7.04px] rounded-br-[7.04px]">
                     {" "}
                     {/* Added rounded corners */}
                     <svg
@@ -477,13 +476,13 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
                     >
                       <path
                         d="M11 8.5L20 8.5"
-                        stroke="white"
+                        stroke="black"
                         strokeWidth="1.5"
                         strokeLinecap="round"
                       />
                       <path
                         d="M4 16.5L14 16.5"
-                        stroke="white"
+                        stroke="black"
                         strokeWidth="1.5"
                         strokeLinecap="round"
                       />
@@ -495,7 +494,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
                 {(searchTerm !== "" || selectedCategory !== "All") && (
                   <button
                     onClick={handleClearFilters}
-                    className="flex items-center bg-red-600 rounded-full px-4 py-2 text-sm font-medium hover:bg-red-700 transition-colors"
+                    className="flex items-center bg-red-600 rounded-full px-4 py-2 text-sm font-medium hover:bg-red-700 transition-colors text-white"
                   >
                     Clear Filters
                   </button>
@@ -508,7 +507,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
               {currentItems.map((item) => (
                 <div
                   key={item.id}
-                  className="bg-[#1E1E1E] rounded-lg overflow-hidden shadow-lg border border-[#3A3A3A] hover:border-[#00C1C9] transition duration-200"
+                  className="bg-gray-50 rounded-lg overflow-hidden shadow-lg border border-gray-200 hover:border-[#00C1C9] transition duration-200"
                 >
                   <div className="relative h-32 w-full">
                     <img
@@ -516,13 +515,13 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
                       alt={item.name}
                       className="w-full h-full object-cover rounded-t-lg"
                     />
-                    <div className="absolute top-2 right-2 bg-[#1A1A1A] text-white text-xs px-2 py-1 rounded-full opacity-80">
+                    <div className="absolute top-2 right-2 bg-gray-800 text-white text-xs px-2 py-1 rounded-full opacity-80">
                       {item.category}
                     </div>
                   </div>
                   <div className="p-4">
                     <h3 className="text-lg font-semibold mb-1">{item.name}</h3>
-                    <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
                       <span className="text-[#FB6000]">{item.category}</span>
                       <span
                         className={`px-2 py-0.5 rounded-full text-xs ${
@@ -575,8 +574,8 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
               disabled={currentPage === 1}
               className={`w-8 h-8 flex items-center justify-center rounded border ${
                 currentPage === 1
-                  ? "cursor-not-allowed border-gray-700 text-gray-700"
-                  : "hover:bg-[#2d2d2d] text-gray-400"
+                  ? "cursor-not-allowed border-gray-300 text-gray-400"
+                  : "hover:bg-gray-200 text-gray-600"
               }`}
             >
               <svg
@@ -588,7 +587,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
               >
                 <path
                   d="M6.99995 13.4502C6.99995 13.4502 1.00001 9.03126 0.999999 7.45015C0.999986 5.86903 7 1.4502 7 1.4502"
-                  stroke="#E2E2E2"
+                  stroke="black"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -603,8 +602,8 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
               disabled={currentPage === totalPages || totalPages === 0}
               className={`w-8 h-8 flex items-center rounded border justify-center ${
                 currentPage === totalPages || totalPages === 0
-                  ? "cursor-not-allowed border-gray-700 text-gray-700"
-                  : "hover:bg-[#2d2d2d] text-gray-400"
+                  ? "cursor-not-allowed border-gray-300 text-gray-400"
+                  : "hover:bg-gray-200 text-gray-600"
               }`}
             >
               <svg
@@ -616,7 +615,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
               >
                 <path
                   d="M1.00005 1.4502C1.00005 1.4502 6.99999 5.86913 7 7.45024C7.00001 9.03136 1 13.4502 1 13.4502"
-                  stroke="#C8C8C8"
+                  stroke="black"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
