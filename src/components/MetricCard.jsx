@@ -26,7 +26,7 @@ export default function MetricCard({
     percentageDirection === "up" ? "bg-green-500/10" : "bg-red-500/10";
 
   return (
-    <div className="w-full h-full bg-white p-4 bg-opacity-10 rounded-lg flex flex-col justify-between shadow-md">
+    <div style={{ boxShadow: "0px 4px 14.7px 0px rgba(0, 0, 0, 0.25)" }} className="w-full h-full bg-white p-4 bg-opacity-10 rounded-lg flex flex-col justify-between shadow-md">
       {" "}
       {/* Changed bg to white, added shadow */}
       {/* Header with Title and Dropdown */}
