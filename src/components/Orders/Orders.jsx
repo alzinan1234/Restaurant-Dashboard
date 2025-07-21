@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation"; // Import useRouter from next/navigation for App Router
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { mockOrders } from "../lib/orders"; // Import mock data from the central file
+import Image from "next/image";
 
 const Orders = () => {
   const [orders, setOrders] = useState(mockOrders);
@@ -216,10 +217,19 @@ const Orders = () => {
                       {order.amount}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium flex space-x-2 justify-center">
+                        <Image
+                        className="cursor-pointer"
+                        src="/icon/right.svg" // Assuming this is your edit icon
+                        alt="Edit"
+                        width={28}
+                        height={28}
+                        onClick={() => handleEdit(row.id)}
+                        unoptimized
+                      />
                     
                       <button
                         onClick={() => handleViewDetails(order.orderId)}
-                        className="text-purple-700 border border-[#C267FF] hover:text-purple-900 rounded-[51px] p-[5px]"
+                        className="text-purple-700 border border-[#C267FF] hover:text-purple-900 rounded-[51px] p-[5px] cursor-pointer"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -238,7 +248,7 @@ const Orders = () => {
                           />
                         </svg>
                       </button>
-                      <button className="text-red-700 hover:text-red-900 border border-[#FF0000] rounded-[51px] p-[5px]">
+                      <button className="text-red-700 hover:text-red-900 border border-[#FF0000] rounded-[51px] p-[5px] cursor-pointer">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="16"
