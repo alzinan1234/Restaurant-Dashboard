@@ -15,6 +15,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Cheese Nachos",
       category: "Starter",
       price: "$49.99",
+      discount: 10, // Added discount
       available: true,
     },
     {
@@ -23,6 +24,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Spicy Tacos",
       category: "Main Course",
       price: "$12.50",
+      discount: 0, // No discount
       available: true,
     },
     {
@@ -31,6 +33,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Chocolate Lava Cake",
       category: "Dessert",
       price: "$8.00",
+      discount: 15, // Added discount
       available: false,
     },
     {
@@ -39,6 +42,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Caesar Salad",
       category: "Starter",
       price: "$9.25",
+      discount: 0,
       available: true,
     },
     {
@@ -47,6 +51,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Pepperoni Pizza",
       category: "Main Course",
       price: "$15.75",
+      discount: 5,
       available: true,
     },
     {
@@ -55,6 +60,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Vanilla Ice Cream",
       category: "Dessert",
       price: "$6.50",
+      discount: 0,
       available: true,
     },
     {
@@ -63,6 +69,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Garlic Bread",
       category: "Starter",
       price: "$5.00",
+      discount: 0,
       available: true,
     },
     {
@@ -71,6 +78,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Beef Burger",
       category: "Main Course",
       price: "$14.00",
+      discount: 0,
       available: true,
     },
     {
@@ -79,6 +87,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Cheesecake",
       category: "Dessert",
       price: "$9.00",
+      discount: 0,
       available: true,
     },
     {
@@ -87,6 +96,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Onion Rings",
       category: "Starter",
       price: "$7.00",
+      discount: 0,
       available: true,
     },
     {
@@ -95,6 +105,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Fish and Chips",
       category: "Main Course",
       price: "$17.00",
+      discount: 0,
       available: true,
     },
     {
@@ -103,6 +114,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Apple Pie",
       category: "Dessert",
       price: "$7.50",
+      discount: 0,
       available: true,
     },
     {
@@ -111,6 +123,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Spring Rolls",
       category: "Starter",
       price: "$6.00",
+      discount: 0,
       available: true,
     },
     {
@@ -119,6 +132,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Chicken Alfredo",
       category: "Main Course",
       price: "$16.00",
+      discount: 0,
       available: true,
     },
     {
@@ -127,6 +141,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Brownie Sundae",
       category: "Dessert",
       price: "$9.50",
+      discount: 0,
       available: true,
     },
     {
@@ -135,6 +150,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Mozzarella Sticks",
       category: "Starter",
       price: "$8.00",
+      discount: 0,
       available: true,
     },
     {
@@ -143,6 +159,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Veggie Pizza",
       category: "Main Course",
       price: "$14.50",
+      discount: 0,
       available: true,
     },
     {
@@ -151,6 +168,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Fruit Salad",
       category: "Dessert",
       price: "$7.00",
+      discount: 0,
       available: true,
     },
     {
@@ -159,6 +177,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Calamari",
       category: "Starter",
       price: "$10.00",
+      discount: 0,
       available: true,
     },
     {
@@ -167,6 +186,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Grilled Salmon",
       category: "Main Course",
       price: "$20.00",
+      discount: 0,
       available: true,
     },
     {
@@ -175,6 +195,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Tiramisu",
       category: "Dessert",
       price: "$10.00",
+      discount: 0,
       available: true,
     },
     {
@@ -183,6 +204,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Hummus Plate",
       category: "Starter",
       price: "$7.50",
+      discount: 0,
       available: true,
     },
     {
@@ -191,6 +213,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Lamb Chops",
       category: "Main Course",
       price: "$25.00",
+      discount: 0,
       available: true,
     },
     {
@@ -199,6 +222,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Panna Cotta",
       category: "Dessert",
       price: "$8.50",
+      discount: 0,
       available: true,
     },
     {
@@ -207,6 +231,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Shrimp Scampi",
       category: "Main Course",
       price: "$19.00",
+      discount: 0,
       available: true,
     },
     {
@@ -215,6 +240,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Chicken Wings",
       category: "Starter",
       price: "$11.00",
+      discount: 0,
       available: true,
     },
     {
@@ -223,6 +249,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "New York Cheesecake",
       category: "Dessert",
       price: "$9.50",
+      discount: 0,
       available: true,
     },
     {
@@ -231,6 +258,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Sushi Platter",
       category: "Main Course",
       price: "$28.00",
+      discount: 0,
       available: true,
     },
     {
@@ -239,6 +267,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "French Fries",
       category: "Starter",
       price: "$4.50",
+      discount: 0,
       available: true,
     },
     {
@@ -247,6 +276,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
       name: "Ravioli",
       category: "Main Course",
       price: "$16.50",
+      discount: 0,
       available: true,
     },
   ]);
@@ -257,6 +287,16 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
 
   const [editingItem, setEditingItem] = useState(null);
   const [showAddItem, setShowAddItem] = useState(false);
+
+  // Helper function to parse price string to number
+  const parsePriceToNumber = (priceString) => {
+    return parseFloat(priceString.replace("$", ""));
+  };
+
+  // Helper function to format number to price string
+  const formatNumberToPrice = (number) => {
+    return `$${number.toFixed(2)}`;
+  };
 
   // Filter menu items based on search term and selected category
   const filteredItems = menuItems.filter((item) => {
@@ -404,7 +444,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
               </div>
               <div className="flex items-center space-x-4">
                 <button
-                  className="flex items-center bg-[#B92921] rounded-full px-4 py-2 text-sm font-medium hover:bg-gray-300 text-white"
+                  className="flex items-center bg-[#B92921] rounded-full px-4 py-2 text-sm font-medium  text-white"
                   onClick={() => setShowAddItem(true)} // Show AddItem on click
                 >
                   <svg
@@ -464,7 +504,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
                     />
                   </div>
 
-                  <button className="hover:bg-gray-300 transition-colors bg-[#B92921] p-[5px] rounded-tr-[7.04px] rounded-br-[7.04px]">
+                  <button className=" transition-colors bg-[#B92921] p-[5px] rounded-tr-[7.04px] rounded-br-[7.04px]">
                     {" "}
                     {/* Added rounded corners */}
                     <svg
@@ -479,12 +519,14 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
                         stroke="white"
                         strokeWidth="1.5"
                         strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                       <path
                         d="M4 16.5L14 16.5"
                         stroke="white"
                         strokeWidth="1.5"
                         strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                       <ellipse cx="7" />
                     </svg>
@@ -504,66 +546,87 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
 
             {/* Menu Items Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-              {currentItems.map((item) => (
-                <div
-                  key={item.id}
-                  className="bg-gray-50 rounded-lg overflow-hidden shadow-lg border border-gray-200 hover:border-[#00C1C9] transition duration-200"
-                >
-                  <div className="relative h-32 w-full">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-full h-full object-cover rounded-t-lg"
-                    />
-                    <div className="absolute top-2 right-2 bg-gray-800 text-white text-xs px-2 py-1 rounded-full opacity-80">
-                      {item.category}
+              {currentItems.map((item) => {
+                const originalPrice = parsePriceToNumber(item.price);
+                const discountedPrice = item.discount
+                  ? originalPrice * (1 - item.discount / 100)
+                  : originalPrice;
+
+                return (
+                  <div
+                    key={item.id}
+                    className="bg-gray-50 rounded-lg overflow-hidden shadow-lg border border-gray-200 hover:border-[#00C1C9] transition duration-200"
+                  >
+                    <div className="relative h-32 w-full">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-full h-full object-cover rounded-t-lg"
+                      />
+                      <div className="absolute top-2 right-2 bg-gray-800 text-white text-xs px-2 py-1 rounded-full opacity-80">
+                        {item.category}
+                      </div>
+                      {item.discount > 0 && (
+                        <div className="absolute top-2 left-2 bg-[#DD0F14] text-white text-xs px-2 py-1 rounded-full font-bold">
+                          {item.discount}% OFF
+                        </div>
+                      )}
                     </div>
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-lg font-semibold mb-1">{item.name}</h3>
-                    <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
-                      <span className="text-[#FB6000]">{item.category}</span>
-                      <span
-                        className={`px-2 py-0.5 rounded-full text-xs ${
-                          item.available
-                            ? "bg-green-600 text-white"
-                            : "bg-red-600 text-white"
-                        }`}
-                      >
-                        {item.available ? "Available" : "Unavailable"}
-                      </span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-lg font-bold text-[#00C1C9]">
-                        {item.price}
-                      </span>
-                      <button
-                        className="p-1 rounded-full border border-[#C267FF] cursor-pointer"
-                        onClick={() => handleEditItem(item)}
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold mb-1">
+                        {item.name}
+                      </h3>
+                      <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
+                        <span className="text-[#FB6000]">
+                          {item.category}
+                        </span>
+                        <span
+                          className={`px-2 py-0.5 rounded-full text-xs ${
+                            item.available
+                              ? "bg-green-600 text-white"
+                              : "bg-red-600 text-white"
+                          }`}
                         >
-                          <path
-                            d="M15 5.81445C15.391 5.81445 15.7047 5.98011 15.9766 6.1875C16.2345 6.38432 16.5176 6.669 16.8389 6.99023L17.0098 7.16113C17.331 7.48237 17.6157 7.76554 17.8125 8.02344C18.0199 8.29525 18.1855 8.60896 18.1855 9C18.1855 9.39104 18.0199 9.70475 17.8125 9.97656C17.6157 10.2345 17.331 10.5176 17.0098 10.8389L9.81641 18.0322C9.64435 18.2043 9.48277 18.3729 9.27734 18.4893C9.07186 18.6056 8.84448 18.6578 8.6084 18.7168L5.9541 19.3799C5.79316 19.4201 5.60594 19.4689 5.44824 19.4844C5.28312 19.5005 4.98347 19.4991 4.74219 19.2578C4.5009 19.0165 4.49947 18.7169 4.51562 18.5518C4.53105 18.3941 4.57988 18.2068 4.62012 18.0459L5.2832 15.3916C5.34222 15.1555 5.3944 14.9281 5.51074 14.7227C5.62711 14.5172 5.79572 14.3557 5.96777 14.1836L13.1611 6.99023C13.4824 6.669 13.7655 6.38432 14.0234 6.1875C14.2953 5.98011 14.609 5.81445 15 5.81445Z"
-                            stroke="#C267FF"
-                            strokeWidth="1.2"
-                          />
-                          <path
-                            d="M12.5 7.5L16.5 11.5"
-                            stroke="#C267FF"
-                            strokeWidth="1.2"
-                          />
-                        </svg>
-                      </button>
+                          {item.available ? "Available" : "Unavailable"}
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-lg font-bold text-[#DD0F14]">
+                          {item.discount > 0 && (
+                            <span className="line-through text-gray-500 mr-2 text-sm">
+                              {item.price}
+                            </span>
+                          )}
+                          {formatNumberToPrice(discountedPrice)}
+                        </span>
+                        <button
+                          className="p-1 rounded-full border border-[#C267FF] cursor-pointer"
+                          onClick={() => handleEditItem(item)}
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M15 5.81445C15.391 5.81445 15.7047 5.98011 15.9766 6.1875C16.2345 6.38432 16.5176 6.669 16.8389 6.99023L17.0098 7.16113C17.331 7.48237 17.6157 7.76554 17.8125 8.02344C18.0199 8.29525 18.1855 8.60896 18.1855 9C18.1855 9.39104 18.0199 9.70475 17.8125 9.97656C17.6157 10.2345 17.331 10.5176 17.0098 10.8389L9.81641 18.0322C9.64435 18.2043 9.48277 18.3729 9.27734 18.4893C9.07186 18.6056 8.84448 18.6578 8.6084 18.7168L5.9541 19.3799C5.79316 19.4201 5.60594 19.4689 5.44824 19.4844C5.28312 19.5005 4.98347 19.4991 4.74219 19.2578C4.5009 19.0165 4.49947 18.7169 4.51562 18.5518C4.53105 18.3941 4.57988 18.2068 4.62012 18.0459L5.2832 15.3916C5.34222 15.1555 5.3944 14.9281 5.51074 14.7227C5.62711 14.5172 5.79572 14.3557 5.96777 14.1836L13.1611 6.99023C13.4824 6.669 13.7655 6.38432 14.0234 6.1875C14.2953 5.98011 14.609 5.81445 15 5.81445Z"
+                              stroke="#C267FF"
+                              strokeWidth="1.2"
+                            />
+                            <path
+                              d="M12.5 7.5L16.5 11.5"
+                              stroke="#C267FF"
+                              strokeWidth="1.2"
+                            />
+                          </svg>
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
