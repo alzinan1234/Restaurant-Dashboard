@@ -18,6 +18,23 @@ const Orders = () => {
     router.push(`/vendor/orders/${orderId}`);
   };
 
+  // Handler for requesting a rider
+  const handleRequestRider = (orderId) => {
+    // Implement your logic here to request a rider for the given orderId
+    // This could involve:
+    // 1. Making an API call to your backend to update the order status.
+    // 2. Displaying a confirmation message to the user.
+    // 3. Potentially updating the local state (orders) to reflect the change.
+    console.log(`Requesting a rider for Order ID: ${orderId}`);
+    alert(`Rider requested for Order ID: ${orderId}`); // Placeholder for demonstration
+    // You might want to update the order status in your state after a successful request
+    setOrders((prevOrders) =>
+      prevOrders.map((order) =>
+        order.orderId === orderId ? { ...order, status: "Rider Requested" } : order
+      )
+    );
+  };
+
   // Filter orders based on search term
   const filteredOrders = orders.filter((order) =>
     Object.values(order).some((value) =>
@@ -189,9 +206,16 @@ const Orders = () => {
                   </th>
                   <th
                     scope="col"
-                    className="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider rounded-tr-lg"
+                    className="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider"
                   >
                     Action
+                  </th>
+                  {/* New header for "Request a Rider" */}
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider rounded-tr-lg"
+                  >
+                    Rider Action
                   </th>
                 </tr>
               </thead>
@@ -209,7 +233,12 @@ const Orders = () => {
                       {order.quantity}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
-                      <span className="inline-flex px-2 text-xs font-semibold leading-5 rounded-full text-orange-700 bg-orange-100">
+                      <span className={`inline-flex px-2 text-xs font-semibold leading-5 rounded-full ${
+                        order.status === "Pending" ? "text-orange-700 bg-orange-100" :
+                        order.status === "Delivered" ? "text-green-700 bg-green-100" :
+                        order.status === "Rider Requested" ? "text-blue-700 bg-blue-100" :
+                        "text-gray-700 bg-gray-100"
+                      }`}>
                         {order.status}
                       </span>
                     </td>
@@ -217,16 +246,16 @@ const Orders = () => {
                       {order.amount}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium flex space-x-2 justify-center">
-                        <Image
+                      <Image
                         className="cursor-pointer"
                         src="/icon/right.svg" // Assuming this is your edit icon
                         alt="Edit"
                         width={28}
                         height={28}
-                        onClick={() => handleEdit(row.id)}
+                        onClick={() => handleViewDetails(order.orderId)} // Re-using handleViewDetails for consistency, you might want a separate handleEdit
                         unoptimized
                       />
-                    
+
                       <button
                         onClick={() => handleViewDetails(order.orderId)}
                         className="text-purple-700 border border-[#C267FF] hover:text-purple-900 rounded-[51px] p-[5px] cursor-pointer"
@@ -264,6 +293,23 @@ const Orders = () => {
                           />
                         </svg>
                       </button>
+                    </td>
+                    {/* New data cell for "Request a Rider" action */}
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                      {order.status !== "Delivered" && order.status !== "Rider Requested" && (
+                        <button
+                          onClick={() => handleRequestRider(order.orderId)}
+                          className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg text-xs"
+                        >
+                          Request Rider
+                        </button>
+                      )}
+                      {order.status === "Rider Requested" && (
+                        <span className="text-gray-500 text-xs">Rider requested</span>
+                      )}
+                      {order.status === "Delivered" && (
+                        <span className="text-gray-500 text-xs">Delivered</span>
+                      )}
                     </td>
                   </tr>
                 ))}
