@@ -50,7 +50,7 @@ const AddCategory = ({ onBackClick, onAddCategory }) => {
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={onBackClick}
-            className="mr-4 p-2 rounded-full hover:bg-gray-200"
+            className="mr-4 p-2 rounded-full "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

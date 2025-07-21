@@ -81,7 +81,7 @@ const AddItem = ({ onBackClick, onAddItem }) => {
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={onBackClick}
-            className="mr-4 p-2 rounded-full hover:bg-gray-200"
+            className="mr-4 p-2 rounded-full "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ const AddItem = ({ onBackClick, onAddItem }) => {
           <h1 className="text-2xl font-semibold">Add Item</h1>
           <button
             onClick={handleAddCategoryClick}
-            className="ml-auto flex items-center bg-[#B92921] rounded-full px-4 py-2 text-sm font-medium hover:bg-gray-300 text-white"
+            className="ml-auto flex items-center bg-[#B92921] rounded-full px-4 py-2 text-sm font-medium  text-white"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
