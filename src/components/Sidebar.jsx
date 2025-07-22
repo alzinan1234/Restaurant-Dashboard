@@ -127,9 +127,12 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 </svg>
             <button
               onClick={() => setIsOpen(false)}
-              className="p-1 hover:bg-gray-200 rounded" // Adjusted hover background for white sidebar
+              className="p-1 hover:bg-gray-200 text-black rounded" // Adjusted hover background for white sidebar
             >
-              <Image src={barss} alt="close" width={20} height={20} />
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
+  <path d="M1 1H19" stroke="#494949" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M1 7H19" stroke="#494949" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
             </button>
           </div>
 

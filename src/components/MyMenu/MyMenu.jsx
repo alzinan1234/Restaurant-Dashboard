@@ -509,26 +509,43 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
                     {/* Added rounded corners */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
+                      width="25"
                       height="25"
-                      viewBox="0 0 24 25"
+                      viewBox="0 0 25 25"
                       fill="none"
                     >
                       <path
-                        d="M11 8.5L20 8.5"
+                        d="M11.75 8.5L20.75 8.5"
                         stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
                       />
                       <path
-                        d="M4 16.5L14 16.5"
+                        d="M4.75 16.5L14.75 16.5"
                         stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
                       />
-                      <ellipse cx="7" />
+                      <ellipse
+                        cx="7.75"
+                        cy="8.5"
+                        rx="3"
+                        ry="3"
+                        transform="rotate(90 7.75 8.5)"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <ellipse
+                        cx="17.75"
+                        cy="16.5"
+                        rx="3"
+                        ry="3"
+                        transform="rotate(90 17.75 16.5)"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
                     </svg>
                   </button>
                 </div>
@@ -577,9 +594,7 @@ const MyMenu = ({ onBackClick, onAddClick }) => {
                         {item.name}
                       </h3>
                       <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
-                        <span className="text-[#FB6000]">
-                          {item.category}
-                        </span>
+                        <span className="text-[#FB6000]">{item.category}</span>
                         <span
                           className={`px-2 py-0.5 rounded-full text-xs ${
                             item.available

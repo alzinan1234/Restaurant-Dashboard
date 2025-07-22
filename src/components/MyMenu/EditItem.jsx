@@ -15,6 +15,8 @@ const EditItem = ({ item, onSave, onBackClick }) => {
     image: item.image,
   });
 
+  const [isAvailable, setIsAvailable] = useState(true); // State for the Available toggle
+
   const fileInputRef = useRef(null);
 
   const handleInputChange = (e) => {
@@ -42,13 +44,17 @@ const EditItem = ({ item, onSave, onBackClick }) => {
   };
 
   const handleDone = () => {
-    onSave(formData); // Pass the updated data back to the parent
+    onSave({ ...formData, isAvailable }); // Pass the updated data including availability
+  };
+
+  const handleToggleAvailability = () => {
+    setIsAvailable((prev) => !prev);
   };
 
   return (
     <div className="min-h-screen bg-white text-black p-8 font-sans rounded-lg flex flex-col items-center">
       <div className="w-full max-w-2xl bg-white rounded-lg">
-        {/* Header with back button and delete icon */}
+        {/* Header with back button, Available toggle, and delete icon */}
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={onBackClick}
@@ -70,7 +76,35 @@ const EditItem = ({ item, onSave, onBackClick }) => {
             </svg>
           </button>
           <h1 className="text-2xl font-semibold">Edit Item</h1>
-          <button className="ml-auto p-2 rounded-full hover:bg-red-100">
+
+          {/* Available Toggle Button */}
+          <div className="flex flex-col items-center gap-2 ml-auto mr-4">
+           
+            <label htmlFor="available-toggle" className="flex items-center cursor-pointer">
+              <div className="relative">
+                <input
+                  type="checkbox"
+                  id="available-toggle"
+                  className="sr-only"
+                  checked={isAvailable}
+                  onChange={handleToggleAvailability}
+                />
+                <div
+                  className={`block w-14 h-8 rounded-full ${
+                    isAvailable ? "bg-green-500" : "bg-gray-300"
+                  }`}
+                ></div>
+                <div
+                  className={`dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition-transform ${
+                    isAvailable ? "translate-x-full" : ""
+                  }`}
+                ></div>
+              </div>
+            </label>
+             <span className="text-sm text-[#3E7E3E ] mr-2">Available</span>
+          </div>
+
+          <button className="p-2 rounded-full hover:bg-red-100 border border-[#FF0000] ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 text-red-500"
